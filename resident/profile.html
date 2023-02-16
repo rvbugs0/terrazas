@@ -31,6 +31,7 @@
 <body>
 
     <div class="content">
+
         <div class="header">
 
             <div class="navbar bg-base-300">
@@ -39,8 +40,8 @@
                 </div>
                 <div class="flex-none">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li tabindex="0">
+                        <li><a href="profile.html">Home</a></li>
+                        <!-- <li tabindex="0">
                             <a>
                                 Parent
                                 <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -52,8 +53,8 @@
                                 <li><a>Submenu 1</a></li>
                                 <li><a>Submenu 2</a></li>
                             </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        </li> -->
+                        <li><a>Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -80,11 +81,14 @@
                             </div>
                         </figure>
                         <div class="card-body items-center text-center">
-                            <h2 class="card-title white">John Doe</h2>
+                            
+                            <h2 id="nameHeading" class="card-title white">John Doe</h2>
+                            <input style="display: none;" id="nameTextBox"
+                            type="text" placeholder="New Name" class="input input-bordered input-info w-full max-w-xs">
                             <p>Resident - Apartment owner #14</p>
                             <br>
                             <div class="card-actions">
-                                <button class="btn btn-primary">Edit profile</button>
+                                <button class="btn btn-primary" onclick="toggleName()">Edit profile</button>
                             </div>
                         </div>
                     </div>
@@ -174,6 +178,8 @@
         <div class="extender"></div>
 
 
+        
+
         <!-- footer -->
         <footer class="footer items-center p-4 bg-neutral text-neutral-content">
             <div class="items-center grid-flow-col">
@@ -212,5 +218,24 @@
     </div>
 
 </body>
+
+<script >
+
+    function toggleName()
+    {
+        textBox = document.getElementById("nameTextBox")
+        textView = document.getElementById("nameHeading")
+        if(textBox.style.display =='block'){
+            textBox.style.display = 'none'
+            textView.style.display = 'block'
+
+        }else{
+            textView.style.display = 'none'
+            textBox.style.display = 'block'
+        }
+    }
+
+
+</script>
 
 </html>

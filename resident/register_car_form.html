@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../static/css/theme.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Subscriptions</title>
+    <title>Register new car</title>
     <style type="text/css">
         .profile-container {
             padding: 24px;
@@ -71,97 +71,68 @@
 
 
                 <div style="flex: 0.3;display: inline-block;margin-bottom: 10px;padding-right: 64px;">
-                    <table class="table w-full">
-                        <!-- head -->
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Club title</th>
-                                <th>Joined</th>
-                                <th>Options</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                                <th>1</th>
-                                <td>Gym services</td>
-                                <td>10th Jan. 2023</td>
-                                <td><button class="btn btn-outline">Leave</button></td>
-                            </tr>
-                            <!-- row 2 -->
-                            <tr>
-                                <th>2</th>
-                                <td>Spa</td>
-                                <td>15th Jan. 2023</td>
-                                <td><button class="btn btn-outline">Leave</button></td>
-                            </tr>
-                            <!-- row 3 -->
-                            <tr>
-                                <th>3</th>
-                                <td>Football Club</td>
-                                <td>15th Jan. 2023</td>
-                                <td><button class="btn btn-outline">Leave</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                    <!-- space for form -->
+                    <div class="card bg-base-300 shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <div class="avatar">
+                                <div class="w-24 rounded-full">
+                                    <img src="../static/images/avatar.jpg" />
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title white">John Doe</h2>
+                            <p>Resident - Apartment owner #14</p>
+                            <br>
+                            <div class="card-actions">
+                                <button class="btn btn-primary">Edit profile</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bg-base-200 shadow-xl" style="flex: 1;margin-left: 0px;">
 
-                    <h1 style="padding: 16px;" class="text-3xl font-bold white">Available Clubs</h1>
-                    <div class="container">
+
+                    <div class="overflow-x-auto">
+                        <table class="table w-full">
+                          <!-- head -->
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>Vehicle Plate</th>
+                              <th>Make & model</th>
+                              <th>State</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                              <th>1</th>
+                              <td>ABC-1234</td>
+                              <td>Ford Mustang - 2010</td>
+                              <td>TEXAS</td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <th>2</th>
+                                <td>DEF-1234</td>
+                                <td>Chevrolet Cruze - 2020</td>
+                                <td>MARYLAND</td>
+                              </tr>
+                            <!-- row 3 -->
+                            <tr>
+                                <th>3</th>
+                                <td>GHI-1234</td>
+                                <td>GMC Supercharger - 2015</td>
+                                <td>NEWYORK</td>
+                              </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
 
-
-
-                        <div class="box">
-
-                            <div class="w-64 bg-base-100 shadow-xl">
-                                <div class="card-body">
-                                    <h2 class="card-title white">Garden services</h2>
-                                    <p style="visibility: hidden;">-</p>
-                                    <a class="btn btn-primary" href="#">Join</a>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="box">
-                            <div class="w-64 bg-base-100 shadow-xl">
-                                <div class="card-body">
-                                    <h2 class="card-title white">Golf club</h2>
-                                    <p style="visibility: hidden;">-</p>
-                                    <a class="btn btn-primary" href="#">Join</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="w-64 bg-base-100 shadow-xl">
-                                <div class="card-body">
-                                    <h2 class="card-title white">Chess club</h2>
-                                    <p style="visibility: hidden;">-</p>
-                                    <a class="btn btn-primary" href="#">Join</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="w-64 bg-base-100 shadow-xl">
-                                <div class="card-body">
-                                    <h2 class="card-title white">Cycling club</h2>
-                                    <p style="visibility: hidden;">-</p>
-                                
-                                    <a class="btn btn-primary" href="#">Join</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
                 </div>
 
 

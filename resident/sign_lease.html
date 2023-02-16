@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/theme.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Apartment - finalize</title>
+    <style>
+        .lease-container {
+            align-self: center;
+            padding-top: 24px;
+            max-width: 800px;
+            width: 800px;
+            
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="header">
+
+            <div class="navbar bg-base-300">
+                <div class="flex-1">
+                    <a class="btn btn-ghost normal-case text-xl">Terrazas</a>
+                </div>
+                <div class="flex-none">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Item 1</a></li>
+                        <li tabindex="0">
+                            <a>
+                                Parent
+                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24">
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                                </svg>
+                            </a>
+                            <ul class="p-2 bg-base-200">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="lease-container">
+
+            <!-- <h1 class="text-xl font-bold white" style="text-align: center;">Lease - sign</h1> -->
+            
+            <iframe src="../static/docs/lease.pdf" width="100%" height="500px">
+            </iframe>
+            <br />
+            <a class="btn btn-primary" style="align-self:center" href="profile.html">Sign</a>
+            <!-- <a href="forgot_password.html" class="link link-hover link-info">Forgot Password?</a> -->
+
+        </div>
+
+
+        <div class="extender"></div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="../static/css/theme.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Check timings</title>
-    <style type="text/css">
-        .profile-container {
-            padding: 24px;
-            margin: 24px;
-
+    <title>Apartment - finalize</title>
+    <style>
+        .form-container {
+            padding-top: 24px;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 30px;
         }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
 
-        .box {
-            display: inline-block;
-            margin: 10px;
         }
     </style>
 </head>
@@ -39,8 +39,8 @@
                 </div>
                 <div class="flex-none">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a href="profile.html">Home</a></li>
-                        <!-- <li tabindex="0">
+                        <li><a>Item 1</a></li>
+                        <li tabindex="0">
                             <a>
                                 Parent
                                 <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -48,12 +48,12 @@
                                     <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                                 </svg>
                             </a>
-                            <ul class="p-2 bg-base-300">
+                            <ul class="p-2 bg-base-200">
                                 <li><a>Submenu 1</a></li>
                                 <li><a>Submenu 2</a></li>
                             </ul>
-                        </li> -->
-                        <li><a>Logout</a></li>
+                        </li>
+                        <li><a>Item 3</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,67 +61,37 @@
 
 
         </div>
-        <!-- header ends -->
+        <div class="form-container">
 
-
-        <!-- profile container starts -->
-        <div class="profile-container">
-
-            <div style="display: flex;flex-wrap: wrap;">
-
-
-
-                <div class="bg-base-200 shadow-xl" style="flex: 1;margin-left: 0px;">
-
-
-                    <div class="overflow-x-auto">
-                        <table class="table w-full">
-                          <!-- head -->
-                          <thead>
-                            <tr>
-                              <th></th>
-                              <th>Amenity type</th>
-                              <th>Timings</th>
-                              <th>Days open</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                              <th>1</th>
-                              <td>Gym</td>
-                              <td>6AM-10PM</td>
-                              <td>MTWTFSS</td>
-                            </tr>
-                            <!-- row 2 -->
-                            <tr>
-                                <th>2</th>
-                                <td>Spa</td>
-                                <td>10AM-6PM</td>
-                                <td>MTWTF</td>  
-                              </tr>
-                            <!-- row 3 -->
-                            <tr>
-                                <th>3</th>
-                                <td>Swimming Pool</td>
-                                <td>7AM-4PM</td>
-                                <td>MTWTF</td>  
-                              </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-
+            <h1 class="text-5xl font-bold white">Apartment select - Resident Info</h1>
+            <br />
+            <form action="sign_lease.html">
+                <h2 class="white">Fill in your details, sign the lease, take the apartment</h2>
+                <br>
+                <div>
+                    <input type="text" placeholder="Name" class="input input-bordered input-info w-full max-w-xs">
+                </div>
+                
+                <div>
+                    <input type="email" placeholder="Email ID" class="input input-bordered input-info w-full max-w-xs">
+                </div>
+                <br>
+                <div>
+                    <input type="password" placeholder="Password" class="input input-bordered input-info w-full max-w-xs">
                 </div>
 
+                <div>
+                    <input type="password" placeholder="Confirm Password"
+                        class="input input-bordered input-info w-full max-w-xs">
+                </div>
+                <div>
+                    <button class="btn btn-outline" type="submit">Proceed to sign the lease</button>
+                </div>
+            </form>
+            <br />
+            <!-- <a href="forgot_password.html" class="link link-hover link-info">Forgot Password?</a> -->
 
-            </div>
-
-
-
-
-
-        </div><!-- profile container ends-->
+        </div>
 
 
         <div class="extender"></div>
