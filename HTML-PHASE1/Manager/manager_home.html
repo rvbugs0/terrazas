@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark" lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +9,9 @@
     <link rel="stylesheet" href="../static/css/theme.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Check timings</title>
+    <title>Profile</title>
     <style type="text/css">
-        .profile-container {
+        .h1 {
             padding: 24px;
             margin: 24px;
 
@@ -39,7 +40,7 @@
                 </div>
                 <div class="flex-none">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a href="profile.html">Home</a></li>
+                        <li><a href="manager_home.html">Manager Home</a></li>
                         <!-- <li tabindex="0">
                             <a>
                                 Parent
@@ -53,65 +54,107 @@
                                 <li><a>Submenu 2</a></li>
                             </ul>
                         </li> -->
-                        <li><a href="login.html">Logout</a></li>
+                        <li><a href="manager_login.html">Logout</a></li>
                     </ul>
                 </div>
             </div>
-
-
-
+      
+      
+      
         </div>
-        <!-- header ends -->
+              <!-- header ends -->
+    
+        <h1 class="text-center font white" >Facilities Occupancy Statistics</h1>
 
 
         <!-- profile container starts -->
         <div class="profile-container">
 
             <div style="display: flex;flex-wrap: wrap;">
+                <div class="stats shadow">
+  
+                    <div class="stat place-items-center">
+                      <div class="stat-title">Apartments</div>
+                      <div class="stat-value">350</div>
+                      <div class="stat-desc">From January 1st to February 1st</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                      <div class="stat-title">Pool</div>
+                      <div class="stat-value text-secondary">60</div>
+                      <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                      <div class="stat-title">Tennies Court</div>
+                      <div class="stat-value">27</div>
+                      <div class="stat-desc">↘︎ 90 (14%)</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                        <div class="stat-title">Garden</div>
+                        <div class="stat-value">27</div>
+                        <div class="stat-desc">↘︎ 90 (14%)</div>
+                    </div>
 
-
+                  </div>
+            </div>
+        </div>
 
                 <div class="bg-base-200 shadow-xl" style="flex: 1;margin-left: 0px;">
 
+                    <div class="container">
+                        </div>
 
-                    <div class="overflow-x-auto">
-                        <table class="table w-full">
-                          <!-- head -->
-                          <thead>
-                            <tr>
-                              <th></th>
-                              <th>Amenity type</th>
-                              <th>Timings</th>
-                              <th>Days open</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                              <th>1</th>
-                              <td>Gym</td>
-                              <td>6AM-10PM</td>
-                              <td>MTWTFSS</td>
-                            </tr>
-                            <!-- row 2 -->
-                            <tr>
-                                <th>2</th>
-                                <td>Spa</td>
-                                <td>10AM-6PM</td>
-                                <td>MTWTF</td>  
-                              </tr>
-                            <!-- row 3 -->
-                            <tr>
-                                <th>3</th>
-                                <td>Swimming Pool</td>
-                                <td>7AM-4PM</td>
-                                <td>MTWTF</td>  
-                              </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                        <div class="box">
+
+                            <div class="bg-base-100 shadow-xl">
+                                <div class="card-body">
+                                    <h2 class="card-title white">Manage Ammenities Manager</h2>
+                                    <p>Manage all the managers of differnet ammenities at one go.</p>
+                                    <div class="card-actions">
+                                        <a class="btn btn-primary" href="./manager_ammenities.html">Manage</a>
+                                    </div>
+                                </div>
+                            </div>
 
 
+                        </div>
+
+
+                        <div class="box">
+
+                            <div class="bg-base-100 shadow-xl">
+                                <div class="card-body">
+                                    <h2 class="card-title white">Manage Residents</h2>
+                                    <p>Look out for the details of residents living in Terraazas.</p>
+                                    <div class="card-actions ">
+                                        <a class="btn btn-primary" href="./manager_reisdents.html">Manage</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="box">
+
+                            <div class="bg-base-100 shadow-xl">
+                                <div class="card-body">
+                                    <h2 class="card-title white">Manage Visitors</h2>
+                                    <p>Check out total number of visitors visiting Terraazas.</p>
+                                    <div class="card-actions ">
+                                        <a class="btn btn-primary" href="./manager_visitor.html">Manage</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
                 </div>
 
 

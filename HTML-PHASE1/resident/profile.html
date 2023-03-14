@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark" lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Profile</title>
     <style type="text/css">
-        .h1 {
+        .profile-container {
             padding: 24px;
             margin: 24px;
 
@@ -31,6 +32,7 @@
 <body>
 
     <div class="content">
+
         <div class="header">
 
             <div class="navbar bg-base-300">
@@ -39,7 +41,7 @@
                 </div>
                 <div class="flex-none">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a href="manager_home.html">Manager Home</a></li>
+                        <li><a href="profile.html">Home</a></li>
                         <!-- <li tabindex="0">
                             <a>
                                 Parent
@@ -53,66 +55,59 @@
                                 <li><a>Submenu 2</a></li>
                             </ul>
                         </li> -->
-                        <li><a href="manager_login.html">Logout</a></li>
+                        <li><a href="login.html">Logout</a></li>
                     </ul>
                 </div>
             </div>
-      
-      
-      
+
+
+
         </div>
-              <!-- header ends -->
-    
-        <h1 class="text-center font white" >Facilities Occupancy Statistics</h1>
+        <!-- header ends -->
 
 
         <!-- profile container starts -->
         <div class="profile-container">
 
             <div style="display: flex;flex-wrap: wrap;">
-                <div class="stats shadow">
-  
-                    <div class="stat place-items-center">
-                      <div class="stat-title">Apartments</div>
-                      <div class="stat-value">350</div>
-                      <div class="stat-desc">From January 1st to February 1st</div>
-                    </div>
-                    
-                    <div class="stat place-items-center">
-                      <div class="stat-title">Pool</div>
-                      <div class="stat-value text-secondary">60</div>
-                      <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
-                    </div>
-                    
-                    <div class="stat place-items-center">
-                      <div class="stat-title">Tennies Court</div>
-                      <div class="stat-value">27</div>
-                      <div class="stat-desc">↘︎ 90 (14%)</div>
-                    </div>
-                    
-                    <div class="stat place-items-center">
-                        <div class="stat-title">Garden</div>
-                        <div class="stat-value">27</div>
-                        <div class="stat-desc">↘︎ 90 (14%)</div>
-                    </div>
 
-                  </div>
-            </div>
-        </div>
+
+                <div style="flex: 0.3;display: inline-block;margin-bottom: 10px;padding-right: 64px;">
+                    <div class="card bg-base-300 shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <div class="avatar">
+                                <div class="w-24 rounded-full">
+                                    <img src="../static/images/avatar.jpg" />
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            
+                            <h2 id="nameHeading" class="card-title white">John Doe</h2>
+                            <input style="display: none;" id="nameTextBox"
+                            type="text" placeholder="New Name" class="input input-bordered input-info w-full max-w-xs">
+                            <p>Resident - Apartment owner #14</p>
+                            <br>
+                            <div class="card-actions">
+                                <button class="btn btn-primary" onclick="toggleName()">Edit profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="bg-base-200 shadow-xl" style="flex: 1;margin-left: 0px;">
 
                     <div class="container">
-                        </div>
+
 
                         <div class="box">
 
                             <div class="bg-base-100 shadow-xl">
                                 <div class="card-body">
-                                    <h2 class="card-title white">Manage Ammenities Manager</h2>
-                                    <p>Manage all the managers of differnet ammenities at one go.</p>
+                                    <h2 class="card-title white">Register vehicles</h2>
+                                    <p>Register your vehicles to avoid parking tickets</p>
                                     <div class="card-actions">
-                                        <a class="btn btn-primary" href="./manager_ammenities.html">Manage</a>
+                                        <a class="btn btn-primary" href="register_vehicle.html">CLICK HERE</a>
                                     </div>
                                 </div>
                             </div>
@@ -125,10 +120,10 @@
 
                             <div class="bg-base-100 shadow-xl">
                                 <div class="card-body">
-                                    <h2 class="card-title white">Manage Residents</h2>
-                                    <p>Look out for the details of residents living in Terraazas.</p>
-                                    <div class="card-actions ">
-                                        <a class="btn btn-primary" href="./manager_reisdents.html">Manage</a>
+                                    <h2 class="card-title white">Check amenities timings</h2>
+                                    <p>Spend your day at pool, enjoy walk along garden trails etc.</p>
+                                    <div class="card-actions">
+                                        <a class="btn btn-primary" href="check_timings.html">CLICK HERE</a>
                                     </div>
                                 </div>
                             </div>
@@ -140,10 +135,10 @@
 
                             <div class="bg-base-100 shadow-xl">
                                 <div class="card-body">
-                                    <h2 class="card-title white">Manage Visitors</h2>
-                                    <p>Check out total number of visitors visiting Terraazas.</p>
-                                    <div class="card-actions ">
-                                        <a class="btn btn-primary" href="./manager_visitor.html">Manage</a>
+                                    <h2 class="card-title white">Membership Services</h2>
+                                    <p>We have multiple clubs and memberships to choose from</p>
+                                    <div class="card-actions">
+                                        <a class="btn btn-primary" href="subscriptions.html">CLICK HERE</a>
                                     </div>
                                 </div>
                             </div>
@@ -151,6 +146,21 @@
 
                         </div>
 
+
+                        <div class="box">
+
+                            <div class="bg-base-100 shadow-xl">
+                                <div class="card-body">
+                                    <h2 class="card-title white">Chat with management</h2>
+                                    <p>Raise your concerns with the management</p>
+                                    <div class="card-actions ">
+                                        <a class="btn btn-primary" href="chat.html">CLICK HERE</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
 
 
                     </div>
@@ -168,6 +178,8 @@
 
         <div class="extender"></div>
 
+
+        
 
         <!-- footer -->
         <footer class="footer items-center p-4 bg-neutral text-neutral-content">
@@ -207,5 +219,24 @@
     </div>
 
 </body>
+
+<script >
+
+    function toggleName()
+    {
+        textBox = document.getElementById("nameTextBox")
+        textView = document.getElementById("nameHeading")
+        if(textBox.style.display =='block'){
+            textBox.style.display = 'none'
+            textView.style.display = 'block'
+
+        }else{
+            textView.style.display = 'none'
+            textBox.style.display = 'block'
+        }
+    }
+
+
+</script>
 
 </html>
