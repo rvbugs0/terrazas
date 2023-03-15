@@ -34,6 +34,7 @@ import ManagerHeader from "./components/manager/ManagerHeader";
 import ManageVisitors from "./components/manager/ManageVisitors";
 import ManageResidents from "./components/manager/ManageResidents";
 import AmenitiesManagerCRUD from "./components/manager/AmenitiesManagerCRUD";
+import ResidentSignUp from "./components/resident/ResidentSignUp";
 
 function BasicLayout() {
   return (
@@ -102,6 +103,7 @@ function App() {
             <Route path="sign_lease" element={<SignLease />} />
             <Route path="resident_login" element={<ResidentLogin />} />
             <Route path="forgot_password" element={<ForgotPassword />} />
+            <Route path="resident_signup" element={<ResidentSignUp />} />
 
 
             <Route path="manager_login" element={<ManagerLogin />} />
