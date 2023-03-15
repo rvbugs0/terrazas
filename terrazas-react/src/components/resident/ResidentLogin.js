@@ -53,7 +53,8 @@ function ResidentLogin() {
       <br />
       <Link to="/forgot_password" className="link link-hover link-info">
         Forgot Password?
-      </Link>
+      </Link> 
+      <Link to="/resident_signup" class="link link-hover link-info"> |  Sign up</Link>
     </div>
   );
 }

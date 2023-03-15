@@ -60,6 +60,7 @@ import SMManageResident from "./components/securitymanager/SMManageResident";
 import SMChat from "./components/securitymanager/SMChat";
 import SMManageSecurity from "./components/securitymanager/SMManageSecurity";
 import ContactResponse from "./components/ContactResponse";
+import ResidentSignUp from "./components/resident/ResidentSignUp";
 
 function BasicLayout() {
   return (
@@ -183,6 +184,7 @@ function App() {
             <Route path="resident_login" element={<ResidentLogin />} />
             <Route path="forgot_password" element={<ForgotPassword />} />
             <Route path="contact_response" element={<ContactResponse />} />
+             <Route path="resident_signup" element={<ResidentSignUp />} />
 
             {/* <Route path="*" element={<NoPage />} /> */}
           </Route>
