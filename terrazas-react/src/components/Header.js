@@ -45,13 +45,13 @@ function Header() {
               </a>
               <ul className="p-2 bg-base-200">
                 <li>
-                <Link to="resident_login">Resident</Link>
+                <Link to="/resident_login">Resident</Link>
                 </li>
                 <li>
-                  <a href="manager_login">Manager</a>
+                  <Link to="/manager_login">Manager</Link>
                 </li>
                 <li>
-                  <a href="Visitor/visitor.html">Visitor</a>
+                  <Link to="/visitor/home">Visitor</Link>
                 </li>
                 <li>
                   <Link to="resident_login">Admin</Link>

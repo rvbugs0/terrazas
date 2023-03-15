@@ -34,6 +34,18 @@ import ManagerHeader from "./components/manager/ManagerHeader";
 import ManageVisitors from "./components/manager/ManageVisitors";
 import ManageResidents from "./components/manager/ManageResidents";
 import AmenitiesManagerCRUD from "./components/manager/AmenitiesManagerCRUD";
+import VisitorHome from "./components/visitor/VisitorHome";
+import VisitorLog from "./components/visitor/VisitorLog";
+import Directions from "./components/visitor/Directions";
+import Location from "./components/visitor/Location";
+import RegisterVisitor from "./components/visitor/RegisterVisitor";
+import ManagerLoggedOutHeader from "./components/manager/ManagerLoggedOutHeader";
+import GardenManagerLogin from "./components/gardenmanager/GardenManagerLogin";
+import GardenManagerHome from "./components/gardenmanager/GardenManagerHome";
+import GardenManagerHeader from "./components/gardenmanager/GardenManagerHeader";
+import GMManageResident from "./components/gardenmanager/GMManageResident";
+import GMManageVisitor from "./components/gardenmanager/GMManageVisitor";
+import GMChat from "./components/gardenmanager/GMChat";
 
 function BasicLayout() {
   return (
@@ -49,8 +61,6 @@ function BasicLayout() {
   );
 }
 
-
-
 function ResidentLayout() {
   return (
     <>
@@ -65,11 +75,10 @@ function ResidentLayout() {
   );
 }
 
-
 function ManagerLayout() {
   return (
     <>
-      <ManagerHeader/>
+      <ManagerHeader />
 
       <Outlet />
 
@@ -81,6 +90,34 @@ function ManagerLayout() {
 }
 
 
+function GardenManagerLayout() {
+  return (
+    <>
+      <GardenManagerHeader/>
+
+      <Outlet />
+
+      <div className="extender"></div>
+
+      <Footer />
+    </>
+  );
+}
+
+
+function ManagerLoggedOutLayout() {
+  return (
+    <>
+      <ManagerLoggedOutHeader />
+
+      <Outlet />
+
+      <div className="extender"></div>
+
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -103,10 +140,12 @@ function App() {
             <Route path="resident_login" element={<ResidentLogin />} />
             <Route path="forgot_password" element={<ForgotPassword />} />
 
-
-            <Route path="manager_login" element={<ManagerLogin />} />
-
             {/* <Route path="*" element={<NoPage />} /> */}
+          </Route>
+
+          <Route path="/manager_login" element={<ManagerLoggedOutLayout />}>
+            <Route index element={<ManagerLogin />} />
+            <Route path="garden" element={<GardenManagerLogin />} />
           </Route>
 
           <Route path="/resident" element={<ResidentLayout />}>
@@ -118,7 +157,6 @@ function App() {
             <Route path="chat" element={<Chat />} />
           </Route>
 
-
           <Route path="/manager" element={<ManagerLayout />}>
             <Route index element={<Hero />} />
             <Route path="home" element={<ManagerHome />} />
@@ -126,6 +164,27 @@ function App() {
             <Route path="manage_residents" element={<ManageResidents />} />
             <Route path="crud_managers" element={<AmenitiesManagerCRUD />} />
           </Route>
+
+          <Route path="/visitor" element={<BasicLayout />}>
+            <Route index element={<Hero />} />
+            <Route path="home" element={<VisitorHome />} />
+            <Route path="visitor_chat" element={<Chat />} />
+            <Route path="logs_visitor" element={<VisitorLog />} />
+            <Route path="directions" element={<Directions />} />
+            <Route path="map" element={<Location />} />
+            <Route path="register_visitor" element={<RegisterVisitor />} />
+          </Route>
+
+          <Route path="/gardenmanager" element={<GardenManagerLayout />}>
+            <Route index element={<Hero />} />
+            <Route path="home" element={<GardenManagerHome />} />
+            <Route path="manage_visitor" element={<GMManageVisitor />} />
+            <Route path="manage_resident" element={<GMManageResident />} />
+            <Route path="chat" element={<GMChat />} />
+          </Route>
+
+
+
         </Routes>
       </BrowserRouter>
     </div>
