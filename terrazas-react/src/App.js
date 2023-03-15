@@ -46,6 +46,20 @@ import GardenManagerHeader from "./components/gardenmanager/GardenManagerHeader"
 import GMManageResident from "./components/gardenmanager/GMManageResident";
 import GMManageVisitor from "./components/gardenmanager/GMManageVisitor";
 import GMChat from "./components/gardenmanager/GMChat";
+import PoolManagerLogin from "./components/poolmanager/PoolManagerLogin";
+import PoolManagerHeader from "./components/poolmanager/PoolManagerHeader";
+import PoolManagerHome from "./components/poolmanager/PoolManagerHome";
+import PMManageVisitor from "./components/poolmanager/PMManageVisitor";
+import PMManageResident from "./components/poolmanager/PMManageResident";
+import PMChat from "./components/poolmanager/PMChat";
+import SecurityManagerLogin from "./components/securitymanager/SecurityManagerLogin";
+import SecurityManagerHome from "./components/securitymanager/SecurityManagerHome";
+import SecurityManagerHeader from "./components/securitymanager/SecurityManagerHeader";
+import SMManageVisitor from "./components/securitymanager/SMManageVisitor";
+import SMManageResident from "./components/securitymanager/SMManageResident";
+import SMChat from "./components/securitymanager/SMChat";
+import SMManageSecurity from "./components/securitymanager/SMManageSecurity";
+import ContactResponse from "./components/ContactResponse";
 
 function BasicLayout() {
   return (
@@ -89,11 +103,10 @@ function ManagerLayout() {
   );
 }
 
-
 function GardenManagerLayout() {
   return (
     <>
-      <GardenManagerHeader/>
+      <GardenManagerHeader />
 
       <Outlet />
 
@@ -103,6 +116,36 @@ function GardenManagerLayout() {
     </>
   );
 }
+
+
+function PoolManagerLayout() {
+  return (
+    <>
+      <PoolManagerHeader />
+
+      <Outlet />
+
+      <div className="extender"></div>
+
+      <Footer />
+    </>
+  );
+}
+
+function SecurityManagerLayout() {
+  return (
+    <>
+      <SecurityManagerHeader />
+
+      <Outlet />
+
+      <div className="extender"></div>
+
+      <Footer />
+    </>
+  );
+}
+
 
 
 function ManagerLoggedOutLayout() {
@@ -139,6 +182,7 @@ function App() {
             <Route path="sign_lease" element={<SignLease />} />
             <Route path="resident_login" element={<ResidentLogin />} />
             <Route path="forgot_password" element={<ForgotPassword />} />
+            <Route path="contact_response" element={<ContactResponse />} />
 
             {/* <Route path="*" element={<NoPage />} /> */}
           </Route>
@@ -146,6 +190,8 @@ function App() {
           <Route path="/manager_login" element={<ManagerLoggedOutLayout />}>
             <Route index element={<ManagerLogin />} />
             <Route path="garden" element={<GardenManagerLogin />} />
+            <Route path="pool" element={<PoolManagerLogin />} />
+            <Route path="security" element={<SecurityManagerLogin />} />
           </Route>
 
           <Route path="/resident" element={<ResidentLayout />}>
@@ -183,6 +229,24 @@ function App() {
             <Route path="chat" element={<GMChat />} />
           </Route>
 
+
+          <Route path="/poolmanager" element={<PoolManagerLayout />}>
+            <Route index element={<Hero />} />
+            <Route path="home" element={<PoolManagerHome />} />
+            <Route path="manage_visitor" element={<PMManageVisitor />} />
+            <Route path="manage_resident" element={<PMManageResident />} />
+            <Route path="chat" element={<PMChat />} />
+          </Route>
+
+
+          <Route path="/securitymanager" element={<SecurityManagerLayout />}>
+            <Route index element={<Hero />} />
+            <Route path="home" element={<SecurityManagerHome />} />
+            <Route path="manage_visitor" element={<SMManageVisitor />} />
+            <Route path="manage_resident" element={<SMManageResident />} />
+            <Route path="manage_security" element={<SMManageSecurity />} />
+            <Route path="chat" element={<SMChat />} />
+          </Route>
 
 
         </Routes>

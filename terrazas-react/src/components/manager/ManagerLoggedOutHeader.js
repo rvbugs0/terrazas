@@ -33,10 +33,10 @@ function ManagerLoggedOutHeader() {
                   <Link to="/manager_login/garden">Garden Manager</Link>
                 </li>
                 <li>
-                  <a href="../poolmanager/login.html"> Pool Manager</a>
+                  <a href="/manager_login/pool"> Pool Manager</a>
                 </li>
                 <li>
-                  <a href="../manager_security/login.html"> Security Manager</a>
+                  <a href="/manager_login/security"> Security Manager</a>
                 </li>
               </ul>
             </li>

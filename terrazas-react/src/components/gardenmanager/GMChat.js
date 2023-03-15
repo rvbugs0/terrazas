@@ -7,7 +7,7 @@ function GMChat() {
         {`
     .form-container {
       padding-top: 24px;
-
+      min-height:100vh;
       margin: 0 auto;
       text-align: center;
       padding: 30px;

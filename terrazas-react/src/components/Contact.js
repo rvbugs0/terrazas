@@ -34,7 +34,7 @@ function Contact() {
       <div >
         
 
-        <form action="action.html">
+        <form action="/contact_response">
           <br />
           <div className="row">
             <label htmlFor="fname" className="form_text">
