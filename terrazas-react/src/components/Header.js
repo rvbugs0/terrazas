@@ -20,6 +20,10 @@ function Header() {
                 About
               </Link>
             </li>
+
+            <li>
+              <a href="https://sxy1729.uta.cloud" target="_blank" >Blog</a>
+            </li>
             <li>
               <Link className="navbar-home" to="services">
                 Services
@@ -53,9 +57,9 @@ function Header() {
                 <li>
                   <Link to="/visitor/home">Visitor</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="resident_login">Admin</Link>
-                </li>
+                </li> */}
               </ul>
             </li>
           </ul>
